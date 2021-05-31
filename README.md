@@ -8,7 +8,7 @@
 
 ## General Info
 * A small project displaying Covid-19 statistics by the U.S. states.
-* The search box filters a state and display all available cities.   
+ The search box filters a state and display all available cities.   
 
 ## Technologies
 Project is created with :
