@@ -18,7 +18,7 @@ Project is created with :
 
 
 ## Launch
-* [go to website!](https://xtehol.github.io/covid19/)
+* [go to website!](https://xtehol.github.io/covid19/){:target="_blank"}
 
 ## Sources
 * https://covidtracking.com/data/api
