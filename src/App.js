@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { CardList } from './components/card-list/card-list.component';
+import { SearchBox } from './components/search-box/search-box.component';
 import './App.css';
 
 class App extends Component {
@@ -25,6 +26,10 @@ class App extends Component {
       .then(data => this.setState({ usStates: data }))
   }
 
+  handleChange = (e) => {
+    this.setState({ searchField: e.target.value });
+  }
+
   render() {
     const { usStates, searchField } = this.state;
     const filteredUsStates = usStates.filter(usState =>
@@ -33,11 +38,10 @@ class App extends Component {
 
     return (
       <div className="App">
-        <input type="search"
-          placeholder="search state"
-          onChange={e => {
-            this.setState({ searchField: e.target.value })
-          }}
+        <h1>COVID-19 Tracker</h1>
+        <SearchBox
+          placeholder="search a state"
+          handleChange={this.handleChange}
         />
         <CardList usStates={filteredUsStates} />
       </div >
